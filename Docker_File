@@ -1,0 +1,11 @@
+# Use a base image with Java installed
+FROM openjdk:17-jdk-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the compiled Java class into the container
+COPY HelloWorldService.class /app/
+
+# Run the Java application
+CMD ["java", "HelloWorldService"]
